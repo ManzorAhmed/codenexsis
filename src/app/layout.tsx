@@ -6,6 +6,7 @@ import Header from '@/components/Header/Header';
 import Footer from '@/components/Footer/Footer';
 import ScrollProgress from '@/components/ScrollProgress/ScrollProgress';
 import './globals.css';
+import PageLoader from '@/components/PageLoader/PageLoader';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -119,6 +120,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body>
+         <PageLoader /> 
         <ScrollProgress />
         <Header />
         <main>{children}</main>
