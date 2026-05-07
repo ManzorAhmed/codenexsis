@@ -1,0 +1,162 @@
+.section {
+  position: relative;
+  border-top: 1px solid var(--line);
+  padding-block: 8rem 0;
+}
+
+.intro {
+  margin-bottom: 5rem;
+  max-width: 720px;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(1.625rem, 2.8vw, 2.375rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  font-weight: 500;
+  margin-top: 1.25rem;
+}
+
+.titleAccent {
+  color: var(--red-hi);
+  
+  font-weight: 400;
+}
+
+.subtitle {
+  margin-top: 1rem;
+  color: var(--text-2);
+  font-size: 1rem;
+  max-width: 520px;
+}
+
+/* Sticky timeline area */
+.timeline {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  position: relative;
+}
+
+@media (min-width: 1024px) {
+  .timeline { grid-template-columns: 1fr 1.4fr; gap: 4rem; }
+}
+
+.stickyLeft {
+  position: relative;
+}
+
+@media (min-width: 1024px) {
+  .stickyLeft {
+    position: sticky;
+    top: 12rem;
+    align-self: start;
+    height: fit-content;
+  }
+}
+
+.stickyEyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 1rem;
+}
+
+.stickyHeadline {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.stickyText {
+  margin-top: 1.25rem;
+  font-size: 0.9375rem;
+  color: var(--text-2);
+  line-height: 1.65;
+  max-width: 360px;
+}
+
+/* Right: scrolling steps */
+.stepsCol {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  padding-bottom: 8rem;
+}
+
+@media (max-width: 1024px) {
+  .stepsCol { gap: 2.5rem; padding-top: 2rem; padding-bottom: 4rem; }
+}
+
+.step {
+  position: relative;
+  border-top: 1px solid var(--line);
+  padding-top: 2rem;
+}
+
+.stepHead {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.stepNum {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  color: var(--red);
+  letter-spacing: 0.16em;
+  font-variant-numeric: tabular-nums;
+  min-width: 30px;
+}
+
+.stepTitle {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: var(--text);
+}
+
+.stepDuration {
+  margin-left: auto;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  color: var(--text-3);
+}
+
+.stepBody {
+  padding-left: 46px;
+  font-size: 1rem;
+  color: var(--text-2);
+  line-height: 1.65;
+  max-width: 540px;
+}
+
+@media (max-width: 768px) {
+  .stepBody { padding-left: 0; }
+}
+
+/* Step icon decoration */
+.stepIcon {
+  position: absolute;
+  left: -22px;
+  top: 1.5rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--red);
+  box-shadow: 0 0 16px var(--red-glow);
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .stepIcon { display: block; }
+  .step { padding-left: 2rem; }
+}

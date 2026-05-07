@@ -1,0 +1,124 @@
+.section {
+  padding-block: 8rem;
+  position: relative;
+  border-top: 1px solid var(--line);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+@media (min-width: 1024px) {
+  .grid { grid-template-columns: 1fr 1.2fr; gap: 6rem; }
+}
+
+/* Left: number panel */
+.numberSide {
+  position: relative;
+}
+
+.bigNum {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(6rem, 18vw, 12rem);
+  line-height: 0.85;
+  letter-spacing: -0.06em;
+  background: linear-gradient(135deg, var(--red-hi), var(--red-lo));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  display: inline-block;
+}
+
+.plus {
+  background: linear-gradient(135deg, var(--red-hi), var(--red-lo));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.numLabel {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  margin-top: 0.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.miniStats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  max-width: 400px;
+}
+
+.miniStat {
+  border-left: 1px solid var(--line-2);
+  padding-left: 1rem;
+}
+
+.miniStatValue {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--text);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.miniStatLabel {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--text-3);
+  margin-top: 0.3rem;
+}
+
+/* Right: copy */
+.copySide { max-width: 580px; }
+
+.copyTag { margin-bottom: 1.25rem; }
+
+.copyTitle {
+  font-family: var(--font-display);
+  font-size: clamp(1.625rem, 2.8vw, 2.375rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.copyAccent {
+  color: var(--red-hi);
+  
+  font-weight: 400;
+}
+
+.copyBody {
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  color: var(--text-2);
+  margin-bottom: 1.25rem;
+}
+
+.copyBody:last-of-type { margin-bottom: 2rem; }
+
+.copyCTA {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--text);
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--red);
+  transition: color var(--t1);
+}
+
+.copyCTA:hover { color: var(--red-hi); }

@@ -1,0 +1,70 @@
+.pageHero {
+  position: relative;
+  padding-top: calc(var(--header-h) + 5rem);
+  padding-bottom: 4rem;
+  overflow: hidden;
+}
+
+.bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.glow {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 700px;
+  height: 500px;
+  background: radial-gradient(ellipse, rgba(239, 43, 61, 0.14), transparent 70%);
+  filter: blur(80px);
+  pointer-events: none;
+}
+
+.inner {
+  position: relative;
+  z-index: 1;
+}
+
+.crumbs {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--text-3);
+  margin-bottom: 2rem;
+}
+
+.crumbLink:hover { color: var(--text); }
+.crumbCurrent { color: var(--red-hi); }
+
+.tagBlock { margin-bottom: 1.25rem; }
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 3.6vw, 2.875rem);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.035em;
+  max-width: 900px;
+  margin-bottom: 1.5rem;
+}
+
+.titleAccent {
+  color: var(--red-hi);
+  
+  font-weight: 400;
+}
+
+.subtitle {
+  font-size: 1.125rem;
+  color: var(--text-2);
+  max-width: 620px;
+  line-height: 1.55;
+  font-weight: 300;
+}
