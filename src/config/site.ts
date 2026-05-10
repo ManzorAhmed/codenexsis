@@ -31,7 +31,7 @@ export const siteConfig = {
   authors: [{ name: 'Codenexsis Technologies' }],
   creator: 'Codenexsis Technologies',
   contact: {
-    email: 'hello@codenexsis.com',
+    email: 'info@codenexsis.com',
     phone: '+971 50 000 0000',
     address: 'Dubai, United Arab Emirates',
     hours: 'Sun – Thu, 9:00 – 18:00 GST',
@@ -54,11 +54,11 @@ export const siteConfig = {
       hours: 'Mon – Fri, 9:00 – 18:00 CET',
     },
     {
-      city: 'Lahore',
+      city: 'Islamabad',
       country: 'Pakistan',
       flag: '🇵🇰',
       label: 'Engineering',
-      address: 'Lahore, Pakistan',
+      address: 'Islamabad, Pakistan',
       hours: 'Mon – Sat, 9:00 – 18:00 PKT',
     },
   ],
