@@ -18,6 +18,9 @@ export const metadata: Metadata = {
    verification: {
     google: 'knr3EWuOeiwy6u2HH6Pb_knkY7jwlm-m1jhWt4--F4Q',
   },
+  other: {
+    'facebook-domain-verification': '82xvukxa9qjyjzpi3mxk1gycvwpv59',
+  },
   keywords: [...siteConfig.keywords],
   authors: [...siteConfig.authors],
   creator: siteConfig.creator,
