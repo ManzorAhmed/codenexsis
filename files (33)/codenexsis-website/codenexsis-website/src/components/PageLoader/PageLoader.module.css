@@ -1,0 +1,82 @@
+.loader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: #16161d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+.fadeOut {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.logoWrap {
+  width: 180px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: pulseLogo 1.5s ease-in-out infinite;
+}
+
+.logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+@keyframes pulseLogo {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(0.97); }
+}
+
+.barTrack {
+  width: 200px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.barFill {
+  height: 100%;
+  width: 0%;
+  background: #e53e3e;
+  border-radius: 99px;
+  animation: fillBar 2s ease forwards;
+}
+
+@keyframes fillBar {
+  0%   { width: 0%; }
+  30%  { width: 35%; }
+  60%  { width: 65%; }
+  85%  { width: 88%; }
+  100% { width: 100%; }
+}
+
+.tagline {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.35);
+  margin: 0;
+  animation: blink 1.2s ease-in-out infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 0.35; }
+  50% { opacity: 0.7; }
+}

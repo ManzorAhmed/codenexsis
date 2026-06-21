@@ -1,0 +1,116 @@
+.section { padding-block: 6rem; border-top: 1px solid var(--line); }
+
+.intro {
+  max-width: 720px;
+  margin-bottom: 4rem;
+}
+
+.tagBlock { margin-bottom: 1.25rem; }
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  font-weight: 500;
+}
+
+.titleAccent { color: var(--red-hi);  font-weight: 400; }
+
+.body {
+  font-size: 1.0625rem;
+  color: var(--text-2);
+  line-height: 1.7;
+  margin-top: 1.5rem;
+}
+
+/* Values */
+.valuesGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 700px) { .valuesGrid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1100px) { .valuesGrid { grid-template-columns: repeat(4, 1fr); } }
+
+.valueCard {
+  padding: 1.75rem 1.5rem;
+  border-radius: var(--r-lg);
+  border: 1px solid var(--line);
+  background: var(--surface);
+  transition: all var(--t2);
+}
+
+.valueCard:hover {
+  border-color: rgba(239, 43, 61, 0.3);
+  background: var(--surface-2);
+  transform: translateY(-2px);
+}
+
+.valueIcon {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 9px;
+  background: rgba(239, 43, 61, 0.1);
+  color: var(--red-hi);
+  margin-bottom: 1rem;
+}
+
+.valueTitle {
+  font-family: var(--font-display);
+  font-size: 1.0625rem;
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  margin-bottom: 0.5rem;
+}
+
+.valueDesc {
+  font-size: 0.875rem;
+  color: var(--text-2);
+  line-height: 1.55;
+}
+
+/* Timeline */
+.tlList {
+  display: flex;
+  flex-direction: column;
+}
+
+.tlRow {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 2rem;
+  padding: 2rem 0;
+  border-top: 1px solid var(--line);
+  align-items: baseline;
+}
+
+.tlRow:last-child { border-bottom: 1px solid var(--line); }
+
+.tlYear {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  color: var(--red);
+  letter-spacing: 0.16em;
+  font-variant-numeric: tabular-nums;
+}
+
+.tlContent {}
+
+.tlTitle {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  margin-bottom: 0.5rem;
+}
+
+.tlDesc {
+  font-size: 0.9375rem;
+  color: var(--text-2);
+  line-height: 1.6;
+  max-width: 600px;
+}

@@ -1,0 +1,177 @@
+.megaWrap {
+  position: absolute;
+  top: calc(100% + 14px);
+  left: 50%;
+  transform: translateX(-50%) translateY(-12px);
+  width: min(1080px, calc(100vw - 3rem));
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s var(--ease);
+  z-index: 90;
+}
+
+.megaWrapOpen {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+
+.megaPanel {
+  position: relative;
+  background: rgba(17, 17, 29, 0.96);
+  backdrop-filter: blur(28px) saturate(180%);
+  -webkit-backdrop-filter: blur(28px) saturate(180%);
+  border: 1px solid var(--line-2);
+  border-radius: var(--r-xl);
+  overflow: hidden;
+  box-shadow:
+    0 32px 80px -24px rgba(0, 0, 0, 0.8),
+    0 0 0 1px rgba(255, 255, 255, 0.02) inset;
+}
+
+.megaPanel::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, var(--red) 50%, transparent 100%);
+  opacity: 0.5;
+}
+
+.megaGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.megaColumn {
+  padding: 1.75rem 1.5rem;
+  border-right: 1px solid var(--line);
+}
+
+.megaColumn:last-child { border-right: none; }
+
+.colHeader {
+  display: flex;
+  align-items: baseline;
+  gap: 0.55rem;
+  margin-bottom: 0.4rem;
+}
+
+.colNum {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  color: var(--red);
+  letter-spacing: 0.16em;
+}
+
+.colLabel {
+  font-family: var(--font-display);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+
+.colSubtitle {
+  font-size: 0.75rem;
+  color: var(--text-3);
+  margin-bottom: 1.25rem;
+  line-height: 1.5;
+}
+
+.serviceList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+  list-style: none;
+}
+
+.serviceLink {
+  display: flex;
+  gap: 0.7rem;
+  align-items: flex-start;
+  padding: 0.6rem 0.65rem;
+  margin-inline: -0.65rem;
+  border-radius: 10px;
+  transition: background var(--t1);
+}
+
+.serviceLink:hover { background: rgba(239, 43, 61, 0.06); }
+
+.serviceIconBox {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  background: rgba(239, 43, 61, 0.08);
+  color: var(--red-hi);
+  border: 1px solid rgba(239, 43, 61, 0.15);
+  transition: background var(--t1);
+}
+
+.serviceLink:hover .serviceIconBox {
+  background: rgba(239, 43, 61, 0.18);
+}
+
+.serviceText { flex: 1; min-width: 0; }
+
+.serviceTitle {
+  display: block;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--text);
+  line-height: 1.3;
+  margin-bottom: 0.1rem;
+  letter-spacing: -0.005em;
+}
+
+.serviceDesc {
+  display: block;
+  font-size: 0.71875rem;
+  color: var(--text-3);
+  line-height: 1.45;
+}
+
+.bottomStrip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.95rem 1.5rem;
+  background: rgba(0, 0, 0, 0.35);
+  border-top: 1px solid var(--line);
+}
+
+.stripText {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--text-3);
+}
+
+.stripLink {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--text);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.stripLink:hover { color: var(--red-hi); }
+
+/* ---- 4-column variant for the SEO & Digital Marketing mega menu ---- */
+.megaWrapWide {
+  width: min(1240px, calc(100vw - 3rem));
+}
+.megaGrid4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+@media (max-width: 1100px) {
+  .megaGrid4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

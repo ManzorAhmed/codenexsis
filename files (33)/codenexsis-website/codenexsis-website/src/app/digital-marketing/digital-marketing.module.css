@@ -1,0 +1,207 @@
+/* Promises strip */
+.promiseSection {
+  padding: 0 0 1rem;
+  margin-top: -2rem;
+}
+
+.promiseGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.promiseCard {
+  padding: 1.5rem 1.4rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  height: 100%;
+}
+
+.promiseStat {
+  font-family: var(--font-display);
+  font-size: var(--fs-lg);
+  font-weight: 600;
+  color: var(--red-hi);
+  margin-bottom: 0.4rem;
+}
+
+.promiseLabel {
+  color: var(--text-3);
+  font-size: var(--fs-sm);
+  line-height: 1.5;
+}
+
+/* Group sections */
+.groupSection {
+  padding: 4rem 0;
+}
+
+.groupSection:nth-of-type(even) {
+  background: var(--bg-2);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.groupHeader {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.groupNum {
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  color: var(--red-hi);
+  padding-top: 0.4rem;
+  letter-spacing: 0.05em;
+}
+
+.groupTitle {
+  font-family: var(--font-display);
+  font-size: var(--fs-2xl);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.groupDesc {
+  margin-top: 0.35rem;
+  color: var(--text-3);
+  font-size: var(--fs-md);
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 1.75rem 1.6rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-xl);
+  transition: border-color 0.3s var(--ease), transform 0.3s var(--ease), background 0.3s var(--ease);
+}
+
+.card:hover {
+  border-color: var(--red);
+  background: var(--surface-2);
+  transform: translateY(-4px);
+}
+
+.cardTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.1rem;
+}
+
+.cardIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: var(--r-lg);
+  background: var(--red-tint);
+  color: var(--red-hi);
+  border: 1px solid var(--line-2);
+}
+
+.cardNum {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--text-4);
+}
+
+.cardTitle {
+  font-family: var(--font-display);
+  font-size: var(--fs-lg);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.4rem;
+}
+
+.cardTagline {
+  color: var(--red-hi);
+  font-size: var(--fs-sm);
+  font-weight: 500;
+  margin-bottom: 0.85rem;
+}
+
+.cardDescription {
+  color: var(--text-3);
+  font-size: var(--fs-sm);
+  line-height: 1.6;
+  margin-bottom: 1.1rem;
+}
+
+.capList {
+  list-style: none;
+  margin: 0 0 1.4rem;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.capList li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.55rem;
+  color: var(--text-2);
+  font-size: var(--fs-sm);
+  line-height: 1.45;
+}
+
+.capList li svg {
+  color: var(--red-hi);
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+}
+
+.cardLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: auto;
+  color: var(--text);
+  font-size: var(--fs-sm);
+  font-weight: 500;
+  transition: gap 0.25s var(--ease), color 0.25s var(--ease);
+}
+
+.card:hover .cardLink {
+  color: var(--red-hi);
+  gap: 0.7rem;
+}
+
+@media (max-width: 1024px) {
+  .promiseGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .cardGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .promiseGrid {
+    grid-template-columns: 1fr;
+  }
+  .cardGrid {
+    grid-template-columns: 1fr;
+  }
+  .groupSection {
+    padding: 3rem 0;
+  }
+  .groupTitle {
+    font-size: var(--fs-xl);
+  }
+}

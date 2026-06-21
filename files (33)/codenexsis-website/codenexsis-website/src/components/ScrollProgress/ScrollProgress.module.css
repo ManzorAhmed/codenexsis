@@ -1,0 +1,17 @@
+.bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    var(--red-hi) 0%,
+    var(--red) 50%,
+    var(--red-lo) 100%
+  );
+  transform-origin: 0%;
+  z-index: 200;
+  box-shadow: 0 0 12px var(--red-glow);
+  pointer-events: none;
+}
